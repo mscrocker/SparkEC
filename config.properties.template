@@ -1,0 +1,49 @@
+#EXAMPLE FILE WITH DEFAULT CONFIGURATIONS FOR
+#CLOUDEC - SPARK EDITION
+
+
+#GLOBAL
+k = 24
+
+#PREPROCESS
+inputType = FastQ
+#Allowed: "internal", "FastQ", "FastA"
+
+
+#PINCH_CORRECT
+numPinchCorrectAttempts = 1
+#LARGE_KMER_FILTER
+filter_P = false
+filter_S = true
+
+#SPREAD_CORRECT
+numSpreadCorrectAttempts = 1
+arm = -1
+#-1 to use the entire reads as arm
+height = 0
+#scheme = 
+stackMax = -1
+#-1 to disable
+stackMin = 5
+#-1 to disable
+
+#Use value bigger than 0 to override number of splits
+
+#POSTPROCESS
+mergeIgnore = true
+
+#OUTPUT TEMPORAL STAGES
+outputPreprocess = true
+outputPinchCorrect = true
+outputLargeKmerFilter = true
+outputSpreadCorrect = false
+outputUniqueKmerFilter = false
+
+
+#ENABLE STAGES
+enablePinchCorrect = true
+enableLargeKmerFilter = true
+enableSpreadCorrect = true
+enableUniqueKmerFilter = true
+
+
