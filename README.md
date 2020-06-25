@@ -32,6 +32,12 @@ A "config.properties.template" file is provided with this repository. Check it t
 
 `spark-submit SparkEC.jar -in <input dataset> -out <output directory> -config <configuration file>`
 
+It might be also interesting to tune the Spark configuration in order to get the best results. These possible configurations are:
+
+* **spark.hadoop.validateOutputSpecs:** this option must be set to *false* if the output of individual phases is enabled.
+* **spark.serializer:** it is highly recommended to set this option to *org.apache.spark.serializer.KryoSerializer* so the Kryo serializer is used.
+
+
 ## Compilation
 
 In order to build the project, simply run the required maven phase. For example:
